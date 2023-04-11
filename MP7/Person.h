@@ -13,16 +13,19 @@ private:
     string _role;      // "Father", "Mother", "Child", "Grandmother", etc.
 
 public:
-    Person();
-    Person(string firstname, string lastname, int age, string role);
+    Person()
+    {}
+    Person(string firstname, string lastname, int age, string role) : _firstname{ firstname }, _lastname{ lastname }, _age { age }, _role { role }
+    {
+    }
 
-    string getFirstName() const;
-    string getLastName() const;
-    string getFullName() const;
-    string getRole() const;
-    int getAge() const;
+    const string getFirstName() const { return _firstname; }
+    const string getLastName() const { return _lastname; }
+    const string getFullName() const {return (_firstname + _lastname); }
+    const string getRole() const { return _role; }
+    int getAge() const { return _age; }
 
-    void setAge(int age);
+    void setAge(int age) { _age = age; }
 };
 
 
