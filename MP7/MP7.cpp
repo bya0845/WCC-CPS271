@@ -2,22 +2,10 @@
 //
 
 #include <iostream>
-//#include "Family.h"
-#include "Person.h"
-//#include <memory>
-
-using std::cout;
 
 int main()
 {
     std::cout << "Hello World!\n";
-    Person nancy;
-    nancy.setAge(34);
-    cout<<nancy.getAge();
-    cout < nancy.getFirstName;
-    /*Family family;
-    family.addFamilyMember(std::make_shared<Person>("Bo", "Yang", "35", "Student"));
-    family.getFamilyMember(0);*/
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
