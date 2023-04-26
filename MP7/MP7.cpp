@@ -2,19 +2,37 @@
 //
 
 #include <iostream>
+#include "Person.h"
+#include "Family.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Welcome to Machine Problem 7\n" << endl;
+    Person Bo("Bo", "Yang", 35, "Father");
+    Person Sally("Sally", "Wen Mao", 36, "Mother");
+    Person Fiona("Fiona", "Lu", 10, "Child");
+    Person Vivian("Vivian", "Hu", 12, "Child");
+    cout << "Bo's full name is: " << Bo.getFullName() << endl;
+    cout << "Sally's age is: " << Sally.getAge() << endl;
+    cout << "Fiona's last name is " << Fiona.getLastName() << endl;
+    Family family1;
+    family1.addFamilyMember(Bo);
+    family1.addFamilyMember(Sally);
+    family1.addFamilyMember(Fiona);
+    family1.addFamilyMember(Vivian);
+    cout << "The size of the family is: "<< family1.numFamilyMembers() << endl;
+    cout << "The second family member's first name is: " << family1.f[1].getFirstName() << endl;
+    family1.findPerson("Fiona");
+    family1.findPerson("Sally");
+    family1.findPerson("Kyle");
+    cout << Bo.getRole() << endl;
+    cout << Sally.getRole() << endl;
+
+    cout << "\ngetParents and getChildren tests\n" << endl;
+
+    cout << "The parents in the family are:\n" << family1.getParents() << endl;
+    cout << "The children in the family are:\n"<< family1.getChildren() << endl;
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
