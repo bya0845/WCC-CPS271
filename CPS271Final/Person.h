@@ -15,7 +15,7 @@ public:
     {
     }
 
-    ~Person()
+    ~Person() // destructor
     {
     }
 

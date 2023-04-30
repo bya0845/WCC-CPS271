@@ -2,27 +2,23 @@
 #define STUDENT_H
 #include <string>
 #include "Person.h"
+#include <memory> //for unique pointers
 using namespace std;
 
 class Student : public Person
 {
 private:
-	int* m_studID{};
+	unique_ptr<int>m_studID; //makes m_studID a unique pointer so that no destructor/copy constructor is needed
 public:
 	Student()
 	{
-	}
-
-	~Student()
-	{
-		delete m_studID;
 	}
 
 	Student(string Name, string Phone, int InputID) :Person{ Name, Phone }, m_studID{ new int{InputID} }
 	{
 	}
 
-	string display() override
+	string display() override // overrides base class display()
 	{
 		return Person::display() + ", ID: " + to_string(*m_studID);
 	}

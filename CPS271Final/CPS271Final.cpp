@@ -16,17 +16,14 @@ int main()
 	cout << Bo.display() << endl;
 	cout << Aria.display() << endl;
 
-	Student students[4];
+	Student students[4]; // array of 3 students
 	students[0] = Student("Aria", "1234567", 1);
 	students[1] = Student("Pam", "2346575", 2);
 	students[2] = Student("Sally", "33445566", 3);
 	students[3] = Student("Jen", "44550066", 4);
-	/*free(Aria.~Student);
 
-	
-	
-	vector<Student>dynamicStudents(3);
-	dynamicStudents[0] = Student("Aria", "1234567", 1);
+	vector<Student>dynamicStudents(3); // dynamic array aka vector of 3 students
+	dynamicStudents[0] = Student("Aria", "2346575", 1);
 	dynamicStudents[1] = Student("Pam", "2346575", 2);
-	dynamicStudents[2] = Student("Sally", "33445566", 3);*/
+	dynamicStudents[2] = Student("Sally", "33445566", 3);
 }
